@@ -184,6 +184,8 @@
 
 <section>
   <h1 id="greeting"></h1>
+  
+  <input id="name" type="text"/>
 
   <div id="buttons">
     <button onclick="webviewExpand();">Expand Webview</button>
@@ -261,7 +263,8 @@
   }
 
   function webviewExpand() {
-    Telegram.WebApp.sendData("Some Data");
+    const input = document.getElementById("name")
+    Telegram.WebApp.sendData("Some Data" + input.value);
     
   }
 
